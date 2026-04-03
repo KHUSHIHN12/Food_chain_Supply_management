@@ -85,35 +85,11 @@ It allows users to:
 
 ---
 
-📂 Project Structure
-
-blockchain-goods-transaction/
-│
-├── backend/
-│   ├── blockchain/
-│   │   ├── Block.js
-│   │   ├── Blockchain.js
-│   ├── models/
-│   │   ├── BlockModel.js
-│   ├── routes/
-│   │   ├── transactionRoutes.js
-│   ├── web3Config.js
-│   ├── server.js
-│
-├── frontend/
-│   ├── index.html
-│   ├── script.js
-│   ├── style.css
-│
-└── README.md
-
----
-
 ▶️ Setup Instructions
 
 1️⃣ Clone Repository
 
-git clone https://github.com/your-username/blockchain-goods-transaction.git
+git clone
 cd blockchain-goods-transaction
 
 2️⃣ Install Dependencies

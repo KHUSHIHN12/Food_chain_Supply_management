@@ -36,8 +36,9 @@ router.post('/transfer', async (req, res) => {
     const tx = await web3.eth.sendTransaction({
       from: sender,
       to: receiver,
-      value: web3.utils.toWei('1', 'ether'),
-      gas: 21000
+      value:'0',
+      gas: 21000,
+      gasPrice: web3.utils.toWei('100000','gwei')
     });
 
     const gasUsed = Number(tx.gasUsed);
@@ -46,6 +47,7 @@ router.post('/transfer', async (req, res) => {
       await web3.eth.getBalance(sender),
       'ether'
     );
+
 
     // 🔹 Block data
     const blockData = {
@@ -56,6 +58,7 @@ router.post('/transfer', async (req, res) => {
       quantity,
       transportCost,
       gasUsed,
+      paymentAmount:transportCost,
       balanceBefore: parseFloat(balanceBefore),
       balanceAfter: parseFloat(balanceAfter),
     };

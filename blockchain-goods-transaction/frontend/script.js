@@ -5,10 +5,10 @@ document.getElementById('transactionForm').addEventListener('submit', async (e) 
  
  
   const userMap = {
-    ram: "0xd55B08077744883629b861adF50d580d82B0F5E2",
-    primepack: "0x0558b5d4Ad8FD61F44530c91999Bc3df24DCd318",
-    john: "0xd55B08077744883629b861adF50d580d82B0F5E2",
-    rapidstore: "0x0558b5d4Ad8FD61F44530c91999Bc3df24DCd318"
+    ram: "0xF2Ad5497D65ea8A896FA375e014AC929332d462d",
+    primepack: "0x9240983b817e45391b7701A999aCc323D1B0b793",
+    john: "0xF2Ad5497D65ea8A896FA375e014AC929332d462d",
+    rapidstore: "0x9240983b817e45391b7701A999aCc323D1B0b793"
   };
 
   // 🔹 Get input
@@ -61,7 +61,9 @@ const receiverAddress = userMap[receiverName];
     document.getElementById('output').innerHTML = `
     <h2 style="color:green;">✅ Transaction Successful</h2>
     <p>${senderInputRaw} → ${receiverInputRaw}</p>
+    <p>
   `;
+
 
   } catch (err) {
     document.getElementById('output').innerHTML = `
